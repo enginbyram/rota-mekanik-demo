@@ -237,3 +237,5 @@ details.acc p{color:var(--text-2);margin-top:12px;max-width:800px}
 .mmenu .chips a,.mmenu .chips span{border:1px solid rgba(255,255,255,.4);padding:6px 12px;font-size:13px;color:#fff;text-decoration:none}
 .mmenu .chips a.on{background:#fff;color:var(--navy)}
 .lang a:hover{opacity:1!important}
+/* MARDES symbol: size by the ring (D = box), mast rises above it */
+.hdr .sym img{inset:auto;width:103.9%;height:122.5%;left:-2%;top:-20.6%;max-width:none}
