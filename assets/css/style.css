@@ -226,9 +226,11 @@ details.acc p{color:var(--text-2);margin-top:12px;max-width:800px}
 .hero .over,.phero .over{color:var(--cyan)}
 .phero .crumb a:hover{text-decoration:underline}
 @media (max-width:860px){.demo-flag{display:none}}
-.hdr .wrap{position:relative}
-.flow-hdr{position:absolute;top:0;left:calc(var(--pad) + 24px - 140px);pointer-events:none;transition:opacity .25s}
+.hdr .wrap{position:relative;z-index:1}
+.flow-clip{position:absolute;inset:0;overflow:hidden;pointer-events:none;transition:opacity .25s}
+.hdr.scrolled .flow-clip{opacity:0}
+.flow-hdr{position:absolute;top:0;max-width:none;width:2580px;height:96px;left:calc(max(0px, (100% - 1248px - 2*var(--pad))/2) + var(--pad) + 24px - 1720px);pointer-events:none;transition:opacity .25s}
 .hero,.phero{position:relative}
 .hdr.scrolled .flow-hdr{opacity:0}
 .hdr .sym,.hdr .acts{position:relative;z-index:1}
-@media (max-width:860px){.burger{display:flex}.flow-hdr{transform:scale(.667);transform-origin:0 0;left:calc(20px + 20px - 93.3px)}}
+@media (max-width:860px){.burger{display:flex}.flow-hdr{transform:scale(.667);transform-origin:0 0;left:calc(40px - 1146.7px)}}
