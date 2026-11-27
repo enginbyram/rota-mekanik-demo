@@ -1,4 +1,4 @@
-/* Rota Mekanik — demo site. Tokens follow the Figma "00 Foundations" page. */
+/* MARDES — demo site. Tokens follow the Figma "00 Foundations" page. */
 :root{
   --blue:#0047BB; --navy:#041E42; --cyan:#05C3DE; --black:#000; --white:#fff;
   --text:#0A0A0A; --text-2:#606060; --muted:#808080; --subtle:#F2F2F2; --border:#DCDCDC;
@@ -234,3 +234,6 @@ details.acc p{color:var(--text-2);margin-top:12px;max-width:800px}
 .hdr.scrolled .flow-hdr{opacity:0}
 .hdr .sym,.hdr .acts{position:relative;z-index:1}
 @media (max-width:860px){.burger{display:flex}.flow-hdr{transform:scale(.667);transform-origin:0 0;left:calc(40px - 1146.7px)}}
+.mmenu .chips a,.mmenu .chips span{border:1px solid rgba(255,255,255,.4);padding:6px 12px;font-size:13px;color:#fff;text-decoration:none}
+.mmenu .chips a.on{background:#fff;color:var(--navy)}
+.lang a:hover{opacity:1!important}
