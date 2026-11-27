@@ -50,7 +50,8 @@ h1{font-size:61px} h2{font-size:39px} h3{font-size:31px} h4{font-size:25px}
 .hdr .sym{width:48px;height:48px;position:relative}
 .hdr .sym img{position:absolute;inset:0;transition:opacity .25s}
 .hdr .sym .c{opacity:0}
-.nav{display:flex;align-items:center;gap:4px;font-weight:500}
+.nav{display:flex;align-items:center;gap:4px;font-weight:500;background:rgba(255,255,255,.12);border-radius:4px;padding:4px;transition:.25s}
+.hdr.scrolled .nav{background:var(--subtle)}
 .nav>a,.nav .dd>a{display:inline-flex;align-items:center;gap:8px;padding:10px 16px;border-radius:4px}.nav>a:hover,.nav .dd>a:hover{background:rgba(255,255,255,.1)}
 .hdr.scrolled .nav>a:hover,.hdr.scrolled .nav .dd>a:hover{background:var(--subtle)}
 .nav>a,.nav .dd>a{opacity:.92}.nav a:hover{opacity:1}
@@ -66,7 +67,7 @@ h1{font-size:61px} h2{font-size:39px} h3{font-size:31px} h4{font-size:25px}
 .hdr.scrolled{background:#fff;color:var(--text);height:72px;border-bottom:1px solid var(--border)}
 .hdr.scrolled .sym .w{opacity:0}.hdr.scrolled .sym .c{opacity:1}
 .hdr.scrolled .btn-white{background:var(--blue);color:#fff}
-.burger{display:flex;flex-direction:column;align-items:flex-end;gap:6px;width:44px;height:46px;justify-content:center;padding:0 12px;background:none;border:0;color:inherit;cursor:pointer}
+.burger{display:none;flex-direction:column;align-items:flex-end;gap:6px;width:44px;height:46px;justify-content:center;padding:0 12px;background:none;border:0;color:inherit;cursor:pointer}
 .burger span{display:block;width:20px;height:2px;background:currentColor}.burger .s{width:12px}
 
 /* Mobile menu */
@@ -225,3 +226,9 @@ details.acc p{color:var(--text-2);margin-top:12px;max-width:800px}
 .hero .over,.phero .over{color:var(--cyan)}
 .phero .crumb a:hover{text-decoration:underline}
 @media (max-width:860px){.demo-flag{display:none}}
+.hdr .wrap{position:relative}
+.flow-hdr{position:absolute;top:0;left:calc(var(--pad) + 24px - 140px);pointer-events:none;transition:opacity .25s}
+.hero,.phero{position:relative}
+.hdr.scrolled .flow-hdr{opacity:0}
+.hdr .sym,.hdr .acts{position:relative;z-index:1}
+@media (max-width:860px){.burger{display:flex}.flow-hdr{transform:scale(.667);transform-origin:0 0;left:calc(20px + 20px - 93.3px)}}
